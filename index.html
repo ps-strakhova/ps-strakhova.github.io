@@ -53,10 +53,10 @@
     <button class="ps-icon" data-open="cv" style="--c:#33c2e8"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Компьютерное зрение</span></button>
     <button class="ps-icon" data-open="app" style="--c:#58cf8d"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Мобильное приложение</span></button>
     <button class="ps-icon" data-open="web" style="--c:#ffb85c"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Веб и Tilda</span></button>
+    <button class="ps-icon" data-open="auto" style="--c:#2fc4b2"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Автоматизация</span></button>
     <button class="ps-icon" data-open="video" style="--c:#ff8ec7"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>AI-генерации</span><em class="ps-badge soon">new</em></button>
     <button class="ps-icon ps-file" data-open="about" style="--c:#6a5cff"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Обо мне.txt</span></button>
     <button class="ps-icon ps-file" data-open="contacts" style="--c:#ff6b57"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Контакты</span></button>
-    <button class="ps-icon" data-open="auto" style="--c:#2fc4b2"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Автоматизация</span></button>
   </nav>
 
   <!-- ===== ПЕРСОНАЖ: глаза следят за курсором ===== -->
@@ -168,12 +168,7 @@
       <span>Контроллеры</span><em>→</em><span>Сбор данных по IP</span><em>→</em><span>Своя БД</span><em>→</em><span class="hot">Фильтры и пороги</span><em>→</em><span>Telegram</span><em>·</em><span>Яндекс Мессенджер</span><em>·</em><span>Веб-кабинет</span>
     </div>
     <h4>Как выглядит интерфейс</h4>
-    <div class="ps-shots">
-      <figure class="ps-shot" data-src="assets/main/Main1.png" data-cap="Веб-кабинет (скриншот страницы)"></figure>
-      <figure class="ps-shot" data-src="assets/main/ShemaLLM.png" data-cap="Архитектура проекта"></figure>
-      <figure class="ps-shot" data-src="assets/main/Main2.png" data-cap="Уведомление в Веб-кабинет"></figure>
-      <figure class="ps-shot" data-src="assets/main/Main3.png" data-cap="Уведомление в Яндекс Мессенджер"></figure>
-    </div>
+    <div class="ps-shots"></div>
     <h4>Что сделано</h4>
     <ul>
       <li>Собрала требования, спроектировала архитектуру, разработала систему full-stack</li>
@@ -200,12 +195,7 @@
     <h3>Умный поиск по документам</h3>
     <p class="ps-lead">Вопросно-ответная система на LLM и RAG. Результат: выступление на конференции и статья в Proceedings of SPIE.</p>
     <p>В отличие от обычного чат-бота, модель не выдумывает ответы, а находит точные фрагменты в базе знаний, ведёт контекстный диалог и настраивается под компанию.</p>
-    <div class="ps-shots">
-      <figure class="ps-shot" data-src="assets/rag/LLMAI.png" data-cap="Интерфейс вопросно-ответной системы"></figure>
-      <figure class="ps-shot" data-src="assets/rag/LLM.png" data-cap="Схема пайплайна индексации"></figure>
-      <figure class="ps-shot" data-src="assets/rag/SystemLLm.png" data-cap="Схема работы агента"></figure>
-
-    </div>
+    <div class="ps-shots"></div>
     <h4>Что я сделала</h4>
     <ul>
       <li>Спроектировала пайплайн индексации документов</li>
@@ -220,10 +210,7 @@
   <template id="ps-t-cv" data-title="Компьютерное зрение" data-w="600">
     <h3>Своя модель детекции на YOLO</h3>
     <p class="ps-lead">Командный проект: от разметки данных до онлайн-подсчёта объектов. Статья в РИНЦ и диплом I степени научной конференции (2025).</p>
-    <div class="ps-shots">
-      <figure class="ps-shot" data-src="assets/cv/CV1.png" data-cap="Пример детекции и фильтрации для расчёта"></figure>
-      <figure class="ps-shot" data-src="https://www.youtube.com/watch?v=Q2gAJn_pdGg" data-video="" data-cap="Видео работы модели"></figure>
-    </div>
+    <div class="ps-shots"></div>
     <h4>Что сделано</h4>
     <ul>
       <li>Вручную собрали датасеты: более 1000 изображений, разметка и анализ</li>
@@ -238,11 +225,7 @@
   <template id="ps-t-app" data-title="Мобильное приложение" data-w="580">
     <h3>Приложение для изучения английских слов</h3>
     <p class="ps-lead">Командная разработка Android-приложения: трекер привычек и заучивание слов. MVP.</p>
-    <div class="ps-shots">
-      <figure class="ps-shot phone" data-src="assets/app/App1.png" data-cap="Главный экран"></figure>
-      <figure class="ps-shot phone" data-src="assets/app/App2.png" data-cap="Карточки слов"></figure>
-      <figure class="ps-shot phone" data-src="assets/app/App3.png" data-cap="Прогресс"></figure>
-    </div>
+    <div class="ps-shots"></div>
     <h4>Мой вклад</h4>
     <ul>
       <li>Реализовала интерфейс по макетам Figma, вёрстка экранов и навигация</li>
@@ -398,10 +381,10 @@
     photo:'',                  // фото для окна «Обо мне», 'assets/photo/me.jpg'
     media:{
       main:[
-        {src:'assets/main/Main1.jpg', cap:'Веб-кабинет'},
+        {src:'assets/main/Main1.png', cap:'Веб-кабинет'},
         {src:'assets/main/ShemaLLM.png', cap:'Архитектура проекта'},
-        {src:'assets/main/Main2.jpg', cap:'Уведомления Веб-кабинет'},
-        {src:'assets/main/Main3.jpg', cap:'Уведомления Яндекс Мессенджер'},
+        {src:'assets/main/Main2.png', cap:'Уведомления Веб-кабинет'},
+        {src:'assets/main/Main3.png', cap:'Уведомления Яндекс Мессенджер'},
       ],
       rag:[
         {src:'assets/rag/LLM.png', cap:'Архитектура системы'},
@@ -410,12 +393,12 @@
       ],
       cv:[
         {src:'assets/cv/CV1.png', cap:'Детекция и подсчёт'},
-        {youtube:'Q2gAJn_pdGg', cap:'Видео подсчет КЗ', phone:true},
+        {youtube:'Q2gAJn_pdGg', cap:'Фильтрация и подсчет объектов', phone:false},
       ],
       app:[
-        // {src:'assets/app/App1.png', cap:'Главный экран', phone:true},
-        // {src:'assets/app/App2.png', cap:'Карточки слов', phone:true},
-        // {src:'assets/app/App3.png', cap:'Прогресс', phone:true},
+        {src:'assets/app/App1.png', cap:'Главный экран', phone:true},
+        {src:'assets/app/App2.png', cap:'Карточки слов', phone:true},
+        {src:'assets/app/App3.png', cap:'Прогресс', phone:true},
       ],
       web:[
         // {src:'assets/web/standuppoint.jpg', cap:'StandupPoint.ru'},
