@@ -3,141 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Полина Страхова — портфолио</title>
-<style>html,body{margin:0;background:#fff4ec}</style>
+<title>Полина Страхова — внедрение ИИ и автоматизации</title>
+<meta name="description" content="Портфолио Полины Страховой: LLM и RAG, компьютерное зрение, веб-разработка, нейроконтент.">
+<meta property="og:title" content="Полина Страхова — портфолио">
+<meta property="og:description" content="Внедрение ИИ и автоматизации: LLM, RAG, компьютерное зрение, веб, нейроконтент.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236a5cff'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23ff5d8f'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<style>
-.ps-root{--ink:#241f31;--mute:#6d6680;--coral:#ff6b57;--violet:#6a5cff;--card:rgba(255,255,255,.9);
-  position:relative;width:100%;height:100vh;height:100svh;min-height:600px;overflow:hidden;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);
-  background:#fff4ec;-webkit-font-smoothing:antialiased;box-sizing:border-box}
-.ps-root *{box-sizing:border-box}
-.ps-root a{color:var(--violet);text-decoration:none;border-bottom:1px solid rgba(106,92,255,.35)}
-.ps-root a:hover{border-bottom-color:var(--violet)}
-.ps-root button{font:inherit;color:inherit;cursor:pointer}
 
-/* обои */
-.ps-wall{position:absolute;inset:0;overflow:hidden;z-index:0}
-.ps-wall i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.85;animation:ps-drift 22s ease-in-out infinite alternate}
-.ps-wall i:nth-child(1){width:46vmax;height:46vmax;left:-10vmax;top:-12vmax;background:#ffcdbf}
-.ps-wall i:nth-child(2){width:40vmax;height:40vmax;right:-8vmax;top:-6vmax;background:#cdc4ff;animation-duration:28s}
-.ps-wall i:nth-child(3){width:44vmax;height:44vmax;right:10vmax;bottom:-22vmax;background:#b9ecff;animation-duration:25s}
-.ps-wall i:nth-child(4){width:30vmax;height:30vmax;left:20vmax;bottom:-12vmax;background:#ffe6a8;animation-duration:31s}
-@keyframes ps-drift{to{transform:translate(4vmax,3vmax) scale(1.08)}}
-
-/* верхняя панель */
-.ps-menubar{position:absolute;left:0;right:0;top:0;height:36px;z-index:50;display:flex;align-items:center;justify-content:space-between;
-  padding:0 16px;background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;font-weight:600}
-.ps-brand{display:flex;align-items:center;gap:8px}
-.ps-brand b{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--violet))}
-.ps-right{display:flex;align-items:center;gap:12px;font-weight:500}
-.ps-pill{display:inline-flex;align-items:center;gap:6px;background:#e8fff1;color:#13663a;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
-.ps-pill:before{content:"";width:7px;height:7px;border-radius:50%;background:#26c46a;box-shadow:0 0 0 0 rgba(38,196,106,.6);animation:ps-pulse 2s infinite}
-@keyframes ps-pulse{70%{box-shadow:0 0 0 7px rgba(38,196,106,0)}100%{box-shadow:0 0 0 0 rgba(38,196,106,0)}}
-
-/* иконки рабочего стола */
-.ps-desktop{position:absolute;inset:0;z-index:1;padding:56px 18px 96px;display:grid;grid-auto-flow:column;
-  grid-template-rows:repeat(4,minmax(0,110px));grid-auto-columns:104px;gap:6px 8px;align-content:start;justify-content:start}
-.ps-icon{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:8px 4px;border-radius:12px;
-  color:var(--ink);text-align:center;transition:background .15s,transform .15s}
-.ps-icon:hover,.ps-icon:focus-visible{background:rgba(255,255,255,.55);outline:none;transform:translateY(-2px)}
-.ps-icon svg{width:62px;height:52px;color:var(--c,#ffb85c);filter:drop-shadow(0 6px 8px rgba(36,31,49,.18))}
-.ps-icon.ps-file svg{width:46px;height:56px}
-.ps-icon span{font-size:12px;line-height:1.2;font-weight:600;text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.ps-badge{position:absolute;top:2px;right:12px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:var(--coral);padding:2px 6px;border-radius:99px}
-.ps-badge.soon{background:var(--violet)}
-
-/* стикер */
-.ps-note{position:absolute;right:5vw;top:76px;z-index:1;width:250px;padding:20px 20px 22px;background:#fff3a8;transform:rotate(2.5deg);
-  box-shadow:0 14px 24px rgba(36,31,49,.16);border-radius:4px 4px 18px 4px;font-size:15px;line-height:1.45}
-.ps-note:before{content:"";position:absolute;left:50%;top:-10px;width:70px;height:20px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.6)}
-.ps-note h2{margin:0 0 6px;font-size:22px;line-height:1.15}
-.ps-note p{margin:0 0 10px}
-.ps-note small{color:#7a6a14;font-weight:600}
-
-/* окна */
-.ps-windows{position:absolute;inset:0;z-index:20;pointer-events:none}
-.ps-win{position:absolute;pointer-events:auto;display:flex;flex-direction:column;max-height:calc(100% - 140px);background:var(--card);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.9);border-radius:16px;
-  box-shadow:0 30px 60px -12px rgba(36,31,49,.3),0 0 0 1px rgba(36,31,49,.06);animation:ps-pop .22s ease-out}
-@keyframes ps-pop{from{opacity:0;transform:scale(.94) translateY(8px)}}
-.ps-bar{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:grab;user-select:none;touch-action:none;border-bottom:1px solid rgba(36,31,49,.08)}
-.ps-bar:active{cursor:grabbing}
-.ps-dots{display:flex;gap:7px}
-.ps-dots i,.ps-dots button{width:13px;height:13px;border-radius:50%;border:0;padding:0;background:#ffbd2e;display:block}
-.ps-dots button{background:#ff5f57;position:relative}
-.ps-dots button:hover:after{content:"×";position:absolute;inset:0;font-size:12px;line-height:13px;font-weight:700;color:#7a1d17}
-.ps-dots i:last-child{background:#28c840}
-.ps-ttl{flex:1;text-align:center;font-size:13px;font-weight:700;color:var(--mute);margin-right:46px}
-.ps-body{padding:20px 22px 24px;overflow:auto;font-size:14.5px;line-height:1.55}
-.ps-body h3{margin:0 0 4px;font-size:21px;line-height:1.2}
-.ps-body h4{margin:18px 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.ps-body p{margin:0 0 10px}
-.ps-body ul{margin:0 0 6px;padding-left:20px}
-.ps-body li{margin:0 0 5px}
-.ps-lead{color:var(--mute);margin-bottom:14px!important}
-.ps-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.ps-tag{background:#fff;border:1px solid rgba(36,31,49,.12);padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
-.ps-tag.hot{background:var(--coral);border-color:var(--coral);color:#fff}
-.ps-nda{margin-top:16px;padding:10px 12px;border-radius:10px;background:#f2efff;color:#4a3fc4;font-size:13px}
-.ps-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.ps-btn{display:inline-block;padding:8px 14px;border-radius:10px;background:var(--ink);color:#fff!important;font-weight:600;font-size:13px;border:0!important}
-.ps-btn.alt{background:#fff;color:var(--ink)!important;box-shadow:inset 0 0 0 1px rgba(36,31,49,.18)}
-.ps-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0 4px;font-size:12.5px;font-weight:600}
-.ps-flow span{background:#fff;border:1px solid rgba(36,31,49,.12);padding:6px 10px;border-radius:10px}
-.ps-flow span.hot{background:linear-gradient(135deg,#ffe3dc,#e7e2ff);border-color:transparent}
-.ps-flow em{font-style:normal;color:var(--mute)}
-.ps-kv{display:grid;grid-template-columns:130px 1fr;gap:8px 12px}
-.ps-kv dt{color:var(--mute);font-weight:600}
-.ps-kv dd{margin:0}
-.ps-frames{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
-.ps-frames div{aspect-ratio:9/16;border-radius:12px;background:linear-gradient(160deg,#ffd9cf,#d6ceff 60%,#c4f1ff);display:grid;place-items:center;font-size:26px;color:#fff;text-shadow:0 2px 8px rgba(36,31,49,.3)}
-
-/* терминал */
-.ps-win.ps-termwin{background:rgba(26,22,38,.94);border-color:rgba(255,255,255,.12)}
-.ps-termwin .ps-bar{border-bottom-color:rgba(255,255,255,.1)}
-.ps-termwin .ps-ttl{color:#a9a1c4}
-.ps-term{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#e9e4ff}
-.ps-term p{margin:0 0 7px}
-.ps-term b{color:#ff8a78}
-.ps-term u{display:inline-block;min-width:104px;color:#8fe3ff;text-decoration:none}
-.ps-term .ok{color:#7dffb0}
-.ps-tl{opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s}
-.ps-tl.on{opacity:1;transform:none}
-.ps-term .cur{display:inline-block;width:8px;height:15px;background:#e9e4ff;vertical-align:-3px;animation:ps-blink 1s steps(2) infinite}
-@keyframes ps-blink{50%{opacity:0}}
-
-/* док */
-.ps-dock{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:40;display:flex;gap:10px;padding:8px 12px;
-  background:rgba(255,255,255,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.8);border-radius:22px}
-.ps-dock button{position:relative;width:52px;height:52px;border:0;border-radius:14px;background:#fff;font-size:26px;display:grid;place-items:center;
-  box-shadow:0 6px 12px rgba(36,31,49,.14);transition:transform .15s}
-.ps-dock button:hover,.ps-dock button:focus-visible{transform:translateY(-8px) scale(1.12);outline:none}
-.ps-dock button.on:after{content:"";position:absolute;bottom:-7px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ink)}
-.ps-dock button[data-tip]:hover:before{content:attr(data-tip);position:absolute;bottom:68px;left:50%;transform:translateX(-50%);white-space:nowrap;
-  background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:4px 9px;border-radius:8px}
-
-/* мобильная версия */
-@media (max-width:720px){
-  .ps-root{min-height:560px}
-  .ps-note{display:none}
-  .ps-pill{display:none}
-  .ps-desktop{grid-auto-flow:row;grid-template-rows:none;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:4px;padding:50px 10px 96px}
-  .ps-win{left:8px!important;right:8px!important;top:46px!important;width:auto!important;max-height:calc(100% - 140px)}
-  .ps-bar{cursor:default}
-  .ps-kv{grid-template-columns:1fr}
-  .ps-dock{gap:6px;padding:7px 9px}
-  .ps-dock button{width:46px;height:46px;font-size:22px}
-}
-@media (prefers-reduced-motion:reduce){
-  .ps-wall i,.ps-pill:before,.ps-win{animation:none}
-  .ps-tl{opacity:1;transform:none;transition:none}
-}
-</style>
-
-<div class="ps-root" id="psRoot">
+<div class="ps-root" id="psRoot" data-theme="lavender">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="ps-folder" viewBox="0 0 96 80">
       <path d="M6 14a8 8 0 0 1 8-8h22l10 10h34a8 8 0 0 1 8 8v8H6z" fill="currentColor" opacity=".6"/>
@@ -157,12 +34,16 @@
 
   <header class="ps-menubar">
     <div class="ps-brand"><b></b>Полина Страхова</div>
-    <div class="ps-right"><span class="ps-pill">открыта к предложениям</span><span id="psClock">--:--</span></div>
+    <div class="ps-right">
+      <span class="ps-pill">открыта к предложениям</span>
+      <button class="ps-theme" id="psTheme" type="button" aria-label="Сменить цветовую схему" title="Сменить цвета"><span><i></i><i></i><i></i></span><em id="psThemeName" style="font-style:normal">Лаванда</em></button>
+      <span id="psClock">--:--</span>
+    </div>
   </header>
 
   <aside class="ps-note" aria-label="Приветствие">
     <h2>Привет, я Полина&nbsp;👋</h2>
-    <p>Внедряю ИИ и автоматизацию: LLM, RAG, компьютерное зрение. Верстаю сайты и делаю AI-видео.</p>
+    <p>Внедряю ИИ и автоматизирую процессы: LLM, RAG, компьютерное зрение. Верстаю сайты и делаю AI-генерацию.</p>
     <small>Открой любую папку — внутри мои проекты</small>
   </aside>
 
@@ -172,10 +53,100 @@
     <button class="ps-icon" data-open="cv" style="--c:#33c2e8"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Компьютерное зрение</span></button>
     <button class="ps-icon" data-open="app" style="--c:#58cf8d"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Мобильное приложение</span></button>
     <button class="ps-icon" data-open="web" style="--c:#ffb85c"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Веб и Tilda</span></button>
-    <button class="ps-icon" data-open="video" style="--c:#ff8ec7"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>AI-видео</span><em class="ps-badge soon">скоро</em></button>
+    <button class="ps-icon" data-open="video" style="--c:#ff8ec7"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>AI-генерации</span><em class="ps-badge soon">new</em></button>
     <button class="ps-icon ps-file" data-open="about" style="--c:#6a5cff"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Обо мне.txt</span></button>
     <button class="ps-icon ps-file" data-open="contacts" style="--c:#ff6b57"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Контакты</span></button>
+    <button class="ps-icon" data-open="auto" style="--c:#2fc4b2"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Автоматизация</span></button>
   </nav>
+
+  <!-- ===== ПЕРСОНАЖ: глаза следят за курсором ===== -->
+  <div class="ps-char" id="psChar" aria-hidden="true">
+    <div class="ps-say" id="psSay"></div>
+    <svg viewBox="0 0 500 290" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="psSkin" cx="50%" cy="38%" r="70%">
+          <stop offset="0" style="stop-color:var(--skin-hi)"/><stop offset=".62" style="stop-color:var(--skin)"/><stop offset="1" style="stop-color:var(--skin-lo)"/>
+        </radialGradient>
+        <radialGradient id="psWhite" cx="50%" cy="40%" r="65%">
+          <stop offset="0" stop-color="#ffffff"/><stop offset=".75" stop-color="#f6f8ff"/><stop offset="1" stop-color="#dfe6f3"/>
+        </radialGradient>
+        <radialGradient id="psIris" cx="50%" cy="45%" r="55%">
+          <stop offset="0" style="stop-color:var(--iris-hi)"/><stop offset=".6" style="stop-color:var(--iris)"/><stop offset="1" stop-color="#1a0f0a"/>
+        </radialGradient>
+        <filter id="psBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>
+        <clipPath id="psClipL"><ellipse cx="190" cy="178" rx="40" ry="50"/></clipPath>
+        <clipPath id="psClipR"><ellipse cx="310" cy="178" rx="40" ry="50"/></clipPath>
+      </defs>
+
+      <g id="psHead">
+        <!-- волосы сзади -->
+        <path class="hair" d="M72 290 C48 190 60 80 138 30 C200 -8 300 -8 362 30 C440 80 452 190 428 290 Z"/>
+        <!-- уши -->
+        <ellipse cx="104" cy="205" rx="17" ry="26" fill="url(#psSkin)"/>
+        <ellipse cx="396" cy="205" rx="17" ry="26" fill="url(#psSkin)"/>
+        <!-- лицо -->
+        <ellipse cx="250" cy="205" rx="148" ry="170" fill="url(#psSkin)"/>
+        <!-- румянец -->
+        <ellipse cx="148" cy="238" rx="32" ry="19" fill="#ff7d8a" opacity=".3" filter="url(#psBlur)"/>
+        <ellipse cx="352" cy="238" rx="32" ry="19" fill="#ff7d8a" opacity=".3" filter="url(#psBlur)"/>
+        <!-- нос -->
+        <ellipse cx="250" cy="236" rx="13" ry="9" fill="#fff" opacity=".2"/>
+        <path d="M239 246 C244 255 256 255 261 246" fill="none" stroke="#b5694a" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- левый глаз -->
+        <g class="eye" id="psEyeL">
+          <ellipse cx="190" cy="178" rx="40" ry="50" fill="url(#psWhite)"/>
+          <g clip-path="url(#psClipL)">
+            <g class="iris" id="psIrisL">
+              <circle cx="190" cy="182" r="30" fill="url(#psIris)"/>
+              <circle cx="190" cy="182" r="14" fill="#120a07"/>
+              <circle cx="179" cy="170" r="8.5" fill="#fff"/>
+              <circle cx="201" cy="195" r="4" fill="#fff" opacity=".8"/>
+            </g>
+            <ellipse cx="190" cy="136" rx="48" ry="24" fill="#000" opacity=".1"/>
+          </g>
+          <path d="M147 172 C154 122 226 122 233 172" fill="none" stroke="#24150f" stroke-width="6" stroke-linecap="round"/>
+          <path d="M148 166 L134 156 M154 150 L142 138" stroke="#24150f" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        <!-- правый глаз -->
+        <g class="eye" id="psEyeR">
+          <ellipse cx="310" cy="178" rx="40" ry="50" fill="url(#psWhite)"/>
+          <g clip-path="url(#psClipR)">
+            <g class="iris" id="psIrisR">
+              <circle cx="310" cy="182" r="30" fill="url(#psIris)"/>
+              <circle cx="310" cy="182" r="14" fill="#120a07"/>
+              <circle cx="299" cy="170" r="8.5" fill="#fff"/>
+              <circle cx="321" cy="195" r="4" fill="#fff" opacity=".8"/>
+            </g>
+            <ellipse cx="310" cy="136" rx="48" ry="24" fill="#000" opacity=".1"/>
+          </g>
+          <path d="M267 172 C274 122 346 122 353 172" fill="none" stroke="#24150f" stroke-width="6" stroke-linecap="round"/>
+          <path d="M352 166 L366 156 M346 150 L358 138" stroke="#24150f" stroke-width="4" stroke-linecap="round"/>
+        </g>
+
+        <!-- очки (включаются в настройках) -->
+        <g id="psGlasses" style="display:none" fill="rgba(255,255,255,.1)" stroke="#2b2433" stroke-width="5">
+          <circle cx="190" cy="180" r="58"/><circle cx="310" cy="180" r="58"/>
+          <path d="M248 176 Q250 168 252 176" fill="none"/>
+        </g>
+
+        <!-- брови -->
+        <path class="brow" id="psBrowL" d="M142 124 C160 100 205 98 232 112"/>
+        <path class="brow" id="psBrowR" d="M268 112 C295 98 340 100 358 124"/>
+
+        <!-- чёлка -->
+        <path class="hair" d="M96 192 C88 60 178 -12 262 6 C364 22 418 96 404 192 C384 138 332 102 270 100 C206 98 142 122 96 192 Z"/>
+        <path class="strand" d="M150 72 C190 32 262 22 322 42"/>
+        <path class="strand" d="M118 124 C124 92 140 72 160 58"/>
+      </g>
+
+      <!-- руки  -->
+      <g fill="url(#psSkin)">
+        <rect x="40" y="248" width="20" height="60" rx="10"/><rect x="63" y="242" width="20" height="66" rx="10"/><rect x="86" y="246" width="20" height="62" rx="10"/><rect x="108" y="254" width="19" height="54" rx="9.5"/>
+        <rect x="373" y="254" width="19" height="54" rx="9.5"/><rect x="394" y="246" width="20" height="62" rx="10"/><rect x="417" y="242" width="20" height="66" rx="10"/><rect x="440" y="248" width="20" height="60" rx="10"/>
+      </g>
+    </svg>
+  </div>
 
   <div class="ps-windows" id="psWindows"></div>
 
@@ -186,15 +157,22 @@
     <button data-open="contacts" data-tip="Связаться" aria-label="Связаться">✉️</button>
   </div>
 
-  <!-- ===== СОДЕРЖИМОЕ ОКОН ===== -->
+  <div class="ps-lb" id="psLb" aria-hidden="true"><button type="button" aria-label="Закрыть">×</button><div id="psLbBox"></div></div>
 
-  <template id="ps-t-main" data-title="Мониторинг оборудования" data-w="660">
+  <template id="ps-t-main" data-title="Мониторинг оборудования" data-w="700">
     <h3>Система мониторинга оборудования</h3>
-    <p class="ps-lead">Корпоративная система для энергетической компании. Началась как выпускная работа, сейчас развивается как рабочий проект для реального заказчика.</p>
+    <p class="ps-lead">Корпоративная система для заказчика ООО "Компания Дизель". Началась как выпускная работа, сейчас развивается как рабочий проект для реального заказчика.</p>
     <p>Система опрашивает промышленные контроллеры, замечает отклонения и сразу сообщает людям. Всё, от сбора требований до документации, я делаю сама.</p>
     <h4>Как это устроено</h4>
     <div class="ps-flow">
       <span>Контроллеры</span><em>→</em><span>Сбор данных по IP</span><em>→</em><span>Своя БД</span><em>→</em><span class="hot">Фильтры и пороги</span><em>→</em><span>Telegram</span><em>·</em><span>Яндекс Мессенджер</span><em>·</em><span>Веб-кабинет</span>
+    </div>
+    <h4>Как выглядит интерфейс</h4>
+    <div class="ps-shots">
+      <figure class="ps-shot" data-src="assets/main/Main1.png" data-cap="Веб-кабинет (скриншот страницы)"></figure>
+      <figure class="ps-shot" data-src="assets/main/ShemaLLM.png" data-cap="Архитектура проекта"></figure>
+      <figure class="ps-shot" data-src="assets/main/Main2.png" data-cap="Уведомление в Веб-кабинет"></figure>
+      <figure class="ps-shot" data-src="assets/main/Main3.png" data-cap="Уведомление в Яндекс Мессенджер"></figure>
     </div>
     <h4>Что сделано</h4>
     <ul>
@@ -215,13 +193,19 @@
       <span class="ps-tag hot">LLM</span><span class="ps-tag hot">RAG</span><span class="ps-tag">Python</span><span class="ps-tag">Modbus</span>
       <span class="ps-tag">PostgreSQL</span><span class="ps-tag">Telegram API</span><span class="ps-tag">Яндекс Мессенджер API</span><span class="ps-tag">Excel / Word-экспорт</span>
     </div>
-    <p class="ps-nda">🔒 Название заказчика и показатели под NDA. Скриншоты и разбор архитектуры покажу на собеседовании.</p>
+    <!-- <p class="ps-nda">🔒 Название заказчика и показатели под NDA. Разбор архитектуры покажу на собеседовании.</p> -->
   </template>
 
-  <template id="ps-t-rag" data-title="RAG-ассистент" data-w="580">
+  <template id="ps-t-rag" data-title="RAG-ассистент" data-w="600">
     <h3>Умный поиск по документам</h3>
     <p class="ps-lead">Вопросно-ответная система на LLM и RAG. Результат: выступление на конференции и статья в Proceedings of SPIE.</p>
     <p>В отличие от обычного чат-бота, модель не выдумывает ответы, а находит точные фрагменты в базе знаний, ведёт контекстный диалог и настраивается под компанию.</p>
+    <div class="ps-shots">
+      <figure class="ps-shot" data-src="assets/rag/LLMAI.png" data-cap="Интерфейс вопросно-ответной системы"></figure>
+      <figure class="ps-shot" data-src="assets/rag/LLM.png" data-cap="Схема пайплайна индексации"></figure>
+      <figure class="ps-shot" data-src="assets/rag/SystemLLm.png" data-cap="Схема работы агента"></figure>
+
+    </div>
     <h4>Что я сделала</h4>
     <ul>
       <li>Спроектировала пайплайн индексации документов</li>
@@ -233,24 +217,32 @@
     <div class="ps-btns"><a class="ps-btn" href="http://dx.doi.org/10.1117/12.3109759" target="_blank" rel="noopener">Статья в SPIE</a></div>
   </template>
 
-  <template id="ps-t-cv" data-title="Компьютерное зрение" data-w="580">
+  <template id="ps-t-cv" data-title="Компьютерное зрение" data-w="600">
     <h3>Своя модель детекции на YOLO</h3>
     <p class="ps-lead">Командный проект: от разметки данных до онлайн-подсчёта объектов. Статья в РИНЦ и диплом I степени научной конференции (2025).</p>
+    <div class="ps-shots">
+      <figure class="ps-shot" data-src="assets/cv/CV1.png" data-cap="Пример детекции и фильтрации для расчёта"></figure>
+      <figure class="ps-shot" data-src="https://www.youtube.com/watch?v=Q2gAJn_pdGg" data-video="" data-cap="Видео работы модели"></figure>
+    </div>
     <h4>Что сделано</h4>
     <ul>
-      <li>Вручную собрала датасеты: более 1000 изображений, разметка и анализ</li>
-      <li>Обучила модели для детекции, классификации и сегментации</li>
-      <li>Оценила качество по метрикам mAP, IoU и другим</li>
-      <li>Разработала фильтрацию и автоматический подсчёт объектов в режиме онлайн</li>
+      <li>Вручную собрали датасеты: более 1000 изображений, разметка и анализ</li>
+      <li>Обучили модели для детекции, классификации и сегментации</li>
+      <li>Оценили качество по метрикам mAP, IoU и другим</li>
+      <li>Разработали фильтрацию и автоматический подсчёт объектов в режиме онлайн</li>
     </ul>
     <div class="ps-tags"><span class="ps-tag hot">Computer Vision</span><span class="ps-tag">YOLOv5 / v8</span><span class="ps-tag">PyTorch</span><span class="ps-tag">OpenCV</span><span class="ps-tag">Python</span></div>
     <div class="ps-btns"><a class="ps-btn" href="https://www.elibrary.ru/item.asp?id=82747602&pff=1" target="_blank" rel="noopener">Научная статья</a></div>
-    <!-- Когда будет ссылка на видео демонстрации, добавьте сюда вторую кнопку: <a class="ps-btn alt" href="https://www.youtube.com/watch?v=Q2gAJn_pdGg">Видео работы</a> -->
   </template>
 
-  <template id="ps-t-app" data-title="Мобильное приложение" data-w="540">
+  <template id="ps-t-app" data-title="Мобильное приложение" data-w="580">
     <h3>Приложение для изучения английских слов</h3>
     <p class="ps-lead">Командная разработка Android-приложения: трекер привычек и заучивание слов. MVP.</p>
+    <div class="ps-shots">
+      <figure class="ps-shot phone" data-src="assets/app/App1.png" data-cap="Главный экран"></figure>
+      <figure class="ps-shot phone" data-src="assets/app/App2.png" data-cap="Карточки слов"></figure>
+      <figure class="ps-shot phone" data-src="assets/app/App3.png" data-cap="Прогресс"></figure>
+    </div>
     <h4>Мой вклад</h4>
     <ul>
       <li>Реализовала интерфейс по макетам Figma, вёрстка экранов и навигация</li>
@@ -261,7 +253,7 @@
     <div class="ps-btns"><a class="ps-btn" href="https://github.com/ps-strakhova/EnglishLearningApp" target="_blank" rel="noopener">Код на GitHub</a></div>
   </template>
 
-  <template id="ps-t-web" data-title="Веб и Tilda" data-w="560">
+  <template id="ps-t-web" data-title="Веб и Tilda" data-w="600">
     <h3>Сайты: от вёрстки до бэкенда</h3>
     <p class="ps-lead">Адаптивная вёрстка по макетам, Tilda с Zero Block и собственным кодом, REST API и базы данных.</p>
     <h4>Коммерческий проект</h4>
@@ -271,26 +263,64 @@
     <ul>
       <li>Вёрстка из Figma на HTML, CSS и чистом JavaScript</li>
       <li>REST API на Laravel, проектирование БД в MySQL, тестирование в Postman</li>
-      <li>Веб-платформа мониторинга с ролями, графиками и выгрузкой отчётов (см. папку проекта)</li>
+      <li>Веб-платформа мониторинга с ролями, графиками и выгрузкой отчётов (проект на github без публичного доступа)</li>
     </ul>
+    <p class="ps-nda"> Данная страница портфолио - также мой личный проект</p>
     <div class="ps-tags"><span class="ps-tag">Tilda</span><span class="ps-tag">HTML / CSS / JS</span><span class="ps-tag">Laravel</span><span class="ps-tag">FastAPI</span><span class="ps-tag">MySQL</span><span class="ps-tag">Figma</span></div>
+    </template>
+  
+    <template id="ps-t-auto" data-title="Автоматизация процессов" data-w="640">
+    <h3>Автоматизация рутины</h3>
+    <p class="ps-lead">Беру повторяющиеся задачи, которые съедают время, и превращаю их в автоматический процесс: данные собираются сами, отчёты строятся по кнопке, уведомления приходят вовремя.</p>
+  
+    <h4>Как я работаю</h4>
+    <div class="ps-flow">
+      <span>Разобрать задачу</span><em>→</em><span>Нарисовать схему</span><em>→</em><span class="hot">Собрать автоматизацию</span><em>→</em><span>Проверить на реальных данных</span><em>→</em><span>Описать инструкцию</span>
+    </div>
+  
+    <h4>Что уже делала</h4>
+    <dl class="ps-kv">
+      <dt>Уведомления</dt><dd>Система читает показания оборудования и сама пишет в Telegram и Яндекс Мессенджер, когда значение выходит за порог</dd>
+      <dt>Отчёты</dt><dd>Выгрузка данных в Excel и Word одной кнопкой в веб-кабинете, с фильтрами и графиками</dd>
+      <dt>База знаний</dt><dd>Ассистент отвечает сотрудникам по документации компании (LLM и RAG)</dd>
+    </dl>
+  
+    <h4>С чем могу помочь</h4>
+    <dl class="ps-kv">
+      <dt>Заявки с сайта</dt><dd>Форма на Tilda → сообщение в Telegram и строка в таблице, чтобы заявки не терялись</dd>
+      <dt>Сбор данных</dt><dd>Объединить разрозненные Excel-файлы и выгрузки в одну аккуратную таблицу или базу (Python, SQL)</dd>
+      <dt>Регулярные отчёты</dt><dd>Скрипт собирает цифры по расписанию и присылает отчёт на почту или в мессенджер</dd>
+      <dt>Частые вопросы</dt><dd>Бот или ассистент по инструкциям и регламентам команды</dd>
+      <dt>Порядок в знаниях</dt><dd>База знаний, шаблоны и регламенты в Notion, схемы процессов в Miro</dd>
+      <dt>Контент с ИИ</dt><dd>Процесс «идея → промпт → генерация → монтаж» для видео и картинок, с шаблонами промптов</dd>
+    </dl>
+  
+    <div class="ps-tags">
+      <span class="ps-tag hot">Автоматизация</span><span class="ps-tag">Python</span><span class="ps-tag">Telegram API</span><span class="ps-tag">Excel / Word</span>
+      <span class="ps-tag">Tilda</span><span class="ps-tag">Notion</span><span class="ps-tag">Miro</span><span class="ps-tag">ChatGPT</span><span class="ps-tag">Claude Code</span>
+    </div>
   </template>
 
-  <template id="ps-t-video" data-title="AI-видео" data-w="520">
-    <h3>AI-видео и генеративный контент</h3>
-    <p class="ps-lead">Подборка работ в процессе, скоро выложу сюда лучшие ролики.</p>
-    <div class="ps-frames"><div>▶</div><div>▶</div><div>▶</div></div>
+  <template id="ps-t-video" data-title="AI-генерации" data-w="560">
+    <h3>Нейро-генеративный контент</h3>
+    <p class="ps-lead">Мои работы: идея, промпт, генерация, монтаж. Подборка и пополнение в процессе.</p>
+    <div class="ps-shots">
+      <figure class="ps-shot phone" data-src="" data-video="" data-cap="Ролик 1"></figure>
+      <figure class="ps-shot phone" data-src="" data-video="" data-cap="Ролик 2"></figure>
+      <figure class="ps-shot phone" data-src="" data-video="" data-cap="Ролик 3"></figure>
+    </div>
     <p>Делаю ролики от идеи и промпта до монтажа.</p>
-    <div class="ps-tags"><span class="ps-tag">Kling</span><span class="ps-tag">Seedance</span><span class="ps-tag">CapCut</span><span class="ps-tag">Canva</span><span class="ps-tag">Figma</span></div>
+    <div class="ps-tags"><span class="ps-tag">Kling</span><span class="ps-tag">Seedance</span><span class="ps-tag">ChatGPT</span><span class="ps-tag">Claude Code</span><span class="ps-tag">CapCut</span><span class="ps-tag">Canva</span><span class="ps-tag">Figma</span></div>
   </template>
 
-  <template id="ps-t-about" data-title="Обо мне.txt" data-w="580">
+  <template id="ps-t-about" data-title="Обо мне.txt" data-w="600">
+    <figure class="ps-shot ps-avatar" data-src="" data-cap="Фото" data-avatar="1"></figure>
     <h3>Полина Страхова</h3>
-    <p class="ps-lead">Специалист по внедрению ИИ и автоматизации · Тюмень</p>
-    <p>Проектирую решения на LLM и RAG, учусь в магистратуре по инженерии ИИ, делаю AI-видео и верстаю сайты. Разрабатываю вместе с AI-ассистентами (Claude Code, ChatGPT), читаю и рефакторю код, быстро осваиваю новое.</p>
+    <p class="ps-lead">Специалист по внедрению ИИ и автоматизации процессов · Тюмень · удалённо </p>
+    <p>Проектирую решения на LLM и RAG, учусь в магистратуре по инженерии ИИ, делаю AI-генерации и верстаю сайты. Разрабатываю вместе с AI-ассистентами (Claude Code /  ChatGPT), читаю и рефакторю код, быстро осваиваю новое.</p>
     <dl class="ps-kv">
       <dt>Магистратура</dt><dd>ТюмГУ, прикладная информатика (инженерия ИИ), 2026–2028</dd>
-      <dt>Бакалавриат</dt><dd>ТюмГУ, информационные системы и технологии, 2026, средний балл 4,75</dd>
+      <dt>Бакалавриат</dt><dd>ТюмГУ, информационные системы и технологии, 2022-2026, средний балл 4,75</dd>
       <dt>Переподготовка</dt><dd>Специалист по анализу данных, 2024</dd>
       <dt>Опыт</dt><dd>Разработчик проекта мониторинга оборудования, 2025 — н.в.<br>Программист, ООО «СБУ 89», 12.2025 — 10.2026</dd>
       <dt>Языки</dt><dd>Русский, английский B1–B2</dd>
@@ -309,7 +339,7 @@
       <p class="ps-tl"><u>Контент</u>Kling · Seedance · CapCut · Canva</p>
       <p class="ps-tl"><u>Инструменты</u>Claude Code · ChatGPT · DeepSeek · Kimi · Notion · Miro · Git</p>
       <p class="ps-tl"><b>$</b> status</p>
-      <p class="ps-tl ok">● открыта к предложениям</p>
+      <p class="ps-tl ok">● открыта к предложениям · удалённо / гибрид · командировки ок</p>
       <p class="ps-tl"><b>$</b> <span class="cur"></span></p>
     </div>
   </template>
@@ -324,10 +354,13 @@
     <h4>Награды и обучение</h4>
     <ul>
       <li>Диплом I степени научной конференции, проект по компьютерному зрению, 2025</li>
-      <li>Профессиональная переподготовка «Специалист по анализу данных», ТюмГУ, 2024</li>
-      <li>Повышение квалификации «Дизайн сайтов и мультимедийных лонгридов», ТюмГУ, 2023</li>
-      <!-- <li>Курс по видеомонтажу, 2026</li> -->
+      <li>Профессиональная переподготовка «Специалист по анализу данных», 432 ч, ТюмГУ, 2024</li>
+      <li>Повышение квалификации «Дизайн сайтов и мультимедийных лонгридов», 50 ч, ТюмГУ, 2023</li>
+      <li>Курс по видеомонтажу, 2026</li>
     </ul>
+    <div class="ps-shots">
+      <figure class="ps-shot" data-src="" data-cap="Диплом конференции"></figure>
+    </div>
   </template>
 
   <template id="ps-t-contacts" data-title="Контакты" data-w="460">
@@ -336,9 +369,9 @@
     <dl class="ps-kv">
       <dt>Telegram</dt><dd><a href="https://t.me/ps_strakhova" target="_blank" rel="noopener">@ps_strakhova</a></dd>
       <dt>Почта</dt><dd><a href="mailto:pstrakhova@gmail.com">pstrakhova@gmail.com</a></dd>
-      <dt>WhatsApp</dt><dd><a href="https://wa.me/79222636346" target="_blank" rel="noopener">+7 922 263-63-46</a></dd>
+      <dt>Телефон</dt><dd><a href="https://wa.me/79222636346" target="_blank" rel="noopener">+7 922 263-63-46</a></dd>
       <dt>GitHub</dt><dd><a href="https://github.com/ps-strakhova" target="_blank" rel="noopener">ps-strakhova</a></dd>
-      <dt>Город</dt><dd>Тюмень · командировки</dd>
+      <dt>Город</dt><dd>Тюмень · удалённо, гибрид, командировки</dd>
     </dl>
     <div class="ps-btns"><a class="ps-btn" href="https://t.me/ps_strakhova" target="_blank" rel="noopener">Написать в Telegram</a><a class="ps-btn alt" href="mailto:pstrakhova@gmail.com">Написать на почту</a></div>
   </template>
@@ -346,17 +379,92 @@
 
 <script>
 (function(){
+  /* ============ НАСТРОЙКИ ============ */
+  var PS_CONFIG={
+    theme:'mint',          // lavender | peach | mint | night
+    showEmpty:false,           // true: показать пустые рамки-заглушки, чтобы увидеть, где будут фото
+
+    /* ФОТО, СКРИНШОТЫ И ВИДЕО 
+      файлы в папке assets/. Ключ = окно, в котором показать:
+       main (мониторинг), rag, cv, app, web, video.
+       Поля элемента:
+         src:'assets/main/кабинет.jpg'     картинка или скриншот
+         video:'assets/video/ролик.mp4'    видеофайл (превью берётся из первого кадра)
+         youtube:'ID_ролика'               ролик на YouTube (только ID из ссылки)
+         src вместе с video/youtube        своя обложка для видео
+         cap:'Подпись'                     подпись под превью
+         phone:true                        вертикальный кадр (для роликов и экранов телефона)
+       Пустой список [] = в окне только текст. */
+    photo:'',                  // фото для окна «Обо мне», 'assets/photo/me.jpg'
+    media:{
+      main:[
+        {src:'assets/main/Main1.jpg', cap:'Веб-кабинет'},
+        {src:'assets/main/ShemaLLM.png', cap:'Архитектура проекта'},
+        {src:'assets/main/Main2.jpg', cap:'Уведомления Веб-кабинет'},
+        {src:'assets/main/Main3.jpg', cap:'Уведомления Яндекс Мессенджер'},
+      ],
+      rag:[
+        {src:'assets/rag/LLM.png', cap:'Архитектура системы'},
+        {src:'assets/rag/LLMAI.png', cap:'Интерфейс системы'},
+        {src:'assets/rag/SystemLLm.png', cap:'Схема агента'},
+      ],
+      cv:[
+        {src:'assets/cv/CV1.png', cap:'Детекция и подсчёт'},
+        {youtube:'Q2gAJn_pdGg', cap:'Видео подсчет КЗ', phone:true},
+      ],
+      app:[
+        // {src:'assets/app/App1.png', cap:'Главный экран', phone:true},
+        // {src:'assets/app/App2.png', cap:'Карточки слов', phone:true},
+        // {src:'assets/app/App3.png', cap:'Прогресс', phone:true},
+      ],
+      web:[
+        // {src:'assets/web/standuppoint.jpg', cap:'StandupPoint.ru'},
+      ],
+      video:[
+        {youtube:'SjbeLheJywY', cap:'Ролик 1', phone:true},
+        {youtube:'sx922CvHk34', cap:'Ролик 2', phone:true},
+      ],
+      pubs:[
+        // {src:'assets/pubs/diploma.jpg', cap:'Диплом конференции'},
+      ]
+    },
+    char:{                     // внешность персонажа
+      hair:'#3a2218', hairHi:'#6a4430',   // цвет волос и бликов
+      skin:'#f2c4a0', skinHi:'#ffdcc2', skinLo:'#dfa07a',   // тон кожи
+      iris:'#5a3b2a', irisHi:'#9a6a48',   // цвет глаз
+      glasses:true,                      // true: добавить очки
+      bubbles:['Привет! 👋','Загляни в мои проекты   ','Я всё вижу 👀   ','Нужен специалист по ИИ? 😉     ']
+    }
+  };
+  /* ==================================================== */
+
   var root=document.getElementById('psRoot'); if(!root)return;
   var layer=document.getElementById('psWindows');
   var wins={}, z=20;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
 
+  /* ---- часы ---- */
   function clock(){
     var d=new Date(), h=('0'+d.getHours()).slice(-2), m=('0'+d.getMinutes()).slice(-2);
     var el=document.getElementById('psClock'); if(el) el.textContent=h+':'+m;
   }
   clock(); setInterval(clock,20000);
 
+  /* ---- цветовые схемы ---- */
+  var themes=['lavender','peach','mint','night'];
+  var themeNames={lavender:'Лаванда',peach:'Персик',mint:'Мята',night:'Ночь'};
+  function setTheme(t){
+    root.setAttribute('data-theme',t);
+    var n=document.getElementById('psThemeName'); if(n) n.textContent=themeNames[t];
+    try{localStorage.setItem('psTheme',t)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('psTheme')}catch(e){}
+  setTheme(themes.indexOf(saved)>=0?saved:PS_CONFIG.theme);
+  document.getElementById('psTheme').addEventListener('click',function(){
+    var i=themes.indexOf(root.getAttribute('data-theme')); setTheme(themes[(i+1)%themes.length]);
+  });
+
+  /* ---- окна ---- */
   function mark(id,on){
     root.querySelectorAll('.ps-dock [data-open="'+id+'"]').forEach(function(b){b.classList.toggle('on',on)});
   }
@@ -368,6 +476,55 @@
     (function next(){ if(i>=lines.length)return; lines[i++].classList.add('on'); setTimeout(next,i%3===0?380:240); })();
   }
 
+  /* ---- фото, скриншоты, видео ---- */
+  var lb=document.getElementById('psLb'), lbBox=document.getElementById('psLbBox');
+  function closeLb(){ lb.classList.remove('on'); lbBox.innerHTML=''; }
+  lb.addEventListener('click',function(e){ if(e.target===lb||e.target.tagName==='BUTTON') closeLb(); });
+  function openLb(src,video){
+    lbBox.innerHTML='';
+    var el;
+    if(video){
+      if(isFile(video)){ el=document.createElement('video'); el.src=video; el.controls=true; el.autoplay=true; el.playsInline=true; }
+      else { el=document.createElement('iframe'); el.src=video; el.allowFullscreen=true; el.setAttribute('referrerpolicy','strict-origin-when-cross-origin'); el.setAttribute('allow','autoplay; fullscreen; encrypted-media'); }
+    } else { el=document.createElement('img'); el.src=src; el.alt=''; }
+    lbBox.appendChild(el); lb.classList.add('on');
+  }
+  function isFile(u){ return /\.(mp4|webm|mov)(\?|#|$)/i.test(u||''); }
+  function buildMedia(body,id){
+    if(id==='about'&&PS_CONFIG.photo){
+      var av=body.querySelector('.ps-avatar'); if(av) av.setAttribute('data-src',PS_CONFIG.photo);
+    }
+    var items=(PS_CONFIG.media||{})[id]; if(!items||!items.length)return;
+    var box=body.querySelector('.ps-shots');
+    if(!box){
+      box=document.createElement('div'); box.className='ps-shots';
+      var lead=body.querySelector('.ps-lead'); if(lead) lead.after(box); else body.prepend(box);
+    }
+    box.innerHTML='';
+    items.forEach(function(it){
+      var f=document.createElement('figure'); f.className='ps-shot'+(it.phone?' phone':'');
+      var vid=it.video||(it.youtube?'https://www.youtube.com/embed/'+it.youtube+'?autoplay=1&rel=0':'');
+      var src=it.src||(it.youtube?'https://img.youtube.com/vi/'+it.youtube+'/hqdefault.jpg':'');
+      f.setAttribute('data-src',src); f.setAttribute('data-video',vid); f.setAttribute('data-cap',it.cap||'');
+      box.appendChild(f);
+    });
+  }
+  function initShots(body){
+    body.querySelectorAll('figure.ps-shot').forEach(function(f){
+      var src=f.getAttribute('data-src'), vid=f.getAttribute('data-video'), cap=f.getAttribute('data-cap')||'';
+      if(!src&&!vid){
+        if(!PS_CONFIG.showEmpty){ f.remove(); return; }
+        f.classList.add('empty'); f.textContent=cap?('🖼️ '+cap):'🖼️'; return;
+      }
+      if(src){ var img=document.createElement('img'); img.src=src; img.alt=cap; img.loading='lazy'; f.appendChild(img); }
+      else if(isFile(vid)){ var v=document.createElement('video'); v.src=vid+'#t=0.5'; v.preload='metadata'; v.muted=true; v.playsInline=true; f.appendChild(v); }
+      else { f.classList.add('empty'); f.textContent='▶ '+cap; }
+      if(vid) f.classList.add('vid');
+      if(cap&&!f.hasAttribute('data-avatar')){ var c=document.createElement('figcaption'); c.textContent=cap; f.appendChild(c); }
+      f.addEventListener('click',function(){ openLb(src,vid); });
+    });
+  }
+
   function openWin(id){
     if(wins[id]){ focusWin(wins[id]); return; }
     var tpl=document.getElementById('ps-t-'+id); if(!tpl)return;
@@ -377,12 +534,16 @@
     w.innerHTML='<div class="ps-bar"><span class="ps-dots"><button type="button" aria-label="Закрыть"></button><i></i><i></i></span><span class="ps-ttl"></span></div><div class="ps-body"></div>';
     w.querySelector('.ps-ttl').textContent=title;
     var body=w.querySelector('.ps-body'); body.appendChild(tpl.content.cloneNode(true));
+    buildMedia(body,id);
+    initShots(body);
 
     var n=Object.keys(wins).length, rw=root.clientWidth;
     width=Math.min(width,rw-16);
+    var topPx=window.innerWidth<=720?46:58+n*26;
     w.style.width=width+'px';
     w.style.left=Math.max(8,Math.min(rw-width-8, 150+n*30))+'px';
-    w.style.top=(58+n*26)+'px';
+    w.style.top=topPx+'px';
+    w.style.maxHeight=Math.max(240,root.clientHeight-topPx-100)+'px';
     layer.appendChild(w); focusWin(w); wins[id]=w; mark(id,true);
 
     w.addEventListener('pointerdown',function(){focusWin(w)});
@@ -410,13 +571,73 @@
   });
   document.addEventListener('keydown',function(e){
     if(e.key!=='Escape')return;
+    if(lb.classList.contains('on')){ closeLb(); return; }
     var top=null,tz=-1; Object.keys(wins).forEach(function(k){var v=+wins[k].style.zIndex||0; if(v>tz){tz=v;top=k}});
     if(top){ wins[top].remove(); delete wins[top]; mark(top,false); }
   });
 
+  /* ---- персонаж ---- */
+  var charEl=document.getElementById('psChar');
+  if(charEl){
+    var C=PS_CONFIG.char, map={hair:'--hair',hairHi:'--hair-hi',skin:'--skin',skinHi:'--skin-hi',skinLo:'--skin-lo',iris:'--iris',irisHi:'--iris-hi'};
+    Object.keys(map).forEach(function(k){ if(C[k]) charEl.style.setProperty(map[k],C[k]); });
+    if(C.glasses) document.getElementById('psGlasses').style.display='';
+
+    var svg=charEl.querySelector('svg'), head=document.getElementById('psHead');
+    var irisL=document.getElementById('psIrisL'), irisR=document.getElementById('psIrisR');
+    var eyeL=document.getElementById('psEyeL'), eyeR=document.getElementById('psEyeR');
+    var browL=document.getElementById('psBrowL'), browR=document.getElementById('psBrowR');
+    var say=document.getElementById('psSay'), lastMove=Date.now(), bi=0, sayTimer=null;
+
+    function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+    function look(x,y){
+      var r=svg.getBoundingClientRect(); if(!r.width)return;
+      var s=r.width/500;
+      [[irisL,190,182],[irisR,310,182]].forEach(function(e){
+        var cx=r.left+e[1]*s, cy=r.top+e[2]*s, dx=x-cx, dy=y-cy, d=Math.sqrt(dx*dx+dy*dy)||1;
+        var k=Math.min(1,d/(170*s+1));
+        e[0].style.transform='translate('+(dx/d*k*12).toFixed(1)+'px,'+(dy/d*k*15).toFixed(1)+'px)';
+      });
+      var hx=clamp((x-(r.left+r.width/2))/(window.innerWidth/2),-1,1);
+      var hy=clamp((y-(r.top+r.height*.5))/(window.innerHeight/2),-1,1);
+      head.style.transform='translate('+(hx*8).toFixed(1)+'px,'+(hy*4).toFixed(1)+'px) rotate('+(hx*2).toFixed(2)+'deg)';
+      var bt=y<r.top?-5:(y>r.bottom?3:0);
+      browL.style.transform=browR.style.transform='translateY('+bt+'px)';
+    }
+    document.addEventListener('pointermove',function(e){ lastMove=Date.now(); look(e.clientX,e.clientY); },{passive:true});
+
+    if(!reduce){
+      setInterval(function(){
+        if(Date.now()-lastMove<5000)return;
+        look(window.innerWidth*(.15+Math.random()*.7), window.innerHeight*(.1+Math.random()*.6));
+      },2200);
+      (function blink(){
+        setTimeout(function(){
+          eyeL.classList.add('blink'); eyeR.classList.add('blink');
+          setTimeout(function(){eyeL.classList.remove('blink'); eyeR.classList.remove('blink');},130);
+          if(Math.random()<.25){ setTimeout(function(){
+            eyeL.classList.add('blink'); eyeR.classList.add('blink');
+            setTimeout(function(){eyeL.classList.remove('blink'); eyeR.classList.remove('blink');},130);
+          },260); }
+          blink();
+        },2500+Math.random()*4000);
+      })();
+    }
+
+    function speak(){
+      var list=C.bubbles||[]; if(!list.length)return;
+      say.textContent=list[bi++%list.length]; say.classList.add('on');
+      clearTimeout(sayTimer); sayTimer=setTimeout(function(){say.classList.remove('on')},2400);
+    }
+    charEl.addEventListener('click',function(){
+      eyeR.classList.add('blink'); setTimeout(function(){eyeR.classList.remove('blink')},420);
+      speak();
+    });
+    if(window.innerWidth>720) setTimeout(speak,2200);
+  }
+
   if(window.innerWidth>=900) setTimeout(function(){openWin('about')},500);
 })();
 </script>
-
 </body>
 </html>
