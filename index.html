@@ -54,12 +54,12 @@
     <button class="ps-icon" data-open="app" style="--c:#58cf8d"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Мобильное приложение</span></button>
     <button class="ps-icon" data-open="web" style="--c:#ffb85c"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Веб и Tilda</span></button>
     <button class="ps-icon" data-open="auto" style="--c:#2fc4b2"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Автоматизация</span></button>
-    <!-- <button class="ps-icon" data-open="video" style="--c:#ff8ec7"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>AI-генерации</span><em class="ps-badge soon">new</em></button> -->
+    <button class="ps-icon" data-open="video" style="--c:#ff8ec7"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>AI-генерации</span><em class="ps-badge soon">new</em></button>
     <button class="ps-icon ps-file" data-open="about" style="--c:#6a5cff"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Обо мне.txt</span></button>
     <button class="ps-icon ps-file" data-open="contacts" style="--c:#ff6b57"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Контакты</span></button>
   </nav>
 
-  <!-- <!-- ===== ПЕРСОНАЖ: глаза следят за курсором ===== -->
+  <!-- ===== ПЕРСОНАЖ: глаза следят за курсором ===== -->
   <div class="ps-char" id="psChar" aria-hidden="true">
     <div class="ps-say" id="psSay"></div>
     <svg viewBox="0 0 500 290" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@
         <rect x="373" y="254" width="19" height="54" rx="9.5"/><rect x="394" y="246" width="20" height="62" rx="10"/><rect x="417" y="242" width="20" height="66" rx="10"/><rect x="440" y="248" width="20" height="60" rx="10"/>
       </g>
     </svg>
-  </div> -->
+  </div>
 
   <div class="ps-windows" id="psWindows"></div>
 
@@ -284,7 +284,7 @@
     </div>
   </template>
 
-  <!-- <template id="ps-t-video" data-title="AI-генерации" data-w="560">
+  <template id="ps-t-video" data-title="AI-генерации" data-w="560">
     <h3>Нейро-генеративный контент</h3>
     <p class="ps-lead">Мои работы: идея, промпт, генерация, монтаж. Подборка и пополнение в процессе.</p>
     <div class="ps-shots">
@@ -294,7 +294,7 @@
     </div>
     <p>Делаю ролики от идеи и промпта до монтажа.</p>
     <div class="ps-tags"><span class="ps-tag">Kling</span><span class="ps-tag">Seedance</span><span class="ps-tag">ChatGPT</span><span class="ps-tag">Claude Code</span><span class="ps-tag">CapCut</span><span class="ps-tag">Canva</span><span class="ps-tag">Figma</span></div>
-  </template> -->
+  </template>
 
   <template id="ps-t-about" data-title="Обо мне.txt" data-w="600">
     <figure class="ps-shot ps-avatar" data-src="" data-cap="Фото" data-avatar="1"></figure>
@@ -400,25 +400,25 @@
         {src:'assets/app/App2.png', cap:'Карточки слов', phone:true},
         {src:'assets/app/App3.png', cap:'Прогресс', phone:true},
       ],
-  //     web:[
-  //       // {src:'assets/web/standuppoint.jpg', cap:'StandupPoint.ru'},
-  //     ],
-  //     video:[
-  //       {youtube:'SjbeLheJywY', cap:'Ролик 1', phone:true},
-  //       {youtube:'sx922CvHk34', cap:'Ролик 2', phone:true},
-  //     ],
-  //     pubs:[
-  //       // {src:'assets/pubs/diploma.jpg', cap:'Диплом конференции'},
-  //     ]
-  //   },
-  //   char:{                     // внешность персонажа
-  //     hair:'#3a2218', hairHi:'#6a4430',   // цвет волос и бликов
-  //     skin:'#f2c4a0', skinHi:'#ffdcc2', skinLo:'#dfa07a',   // тон кожи
-  //     iris:'#5a3b2a', irisHi:'#9a6a48',   // цвет глаз
-  //     glasses:true,                      // true: добавить очки
-  //     bubbles:['Привет! 👋','Загляни в мои проекты   ','Я всё вижу 👀   ','Нужен специалист по ИИ? 😉     ']
-  //   }
-  // };
+      web:[
+        // {src:'assets/web/standuppoint.jpg', cap:'StandupPoint.ru'},
+      ],
+      video:[
+        {youtube:'SjbeLheJywY', cap:'Ролик 1', phone:true},
+        {youtube:'sx922CvHk34', cap:'Ролик 2', phone:true},
+      ],
+      pubs:[
+        // {src:'assets/pubs/diploma.jpg', cap:'Диплом конференции'},
+      ]
+    },
+    char:{                     // внешность персонажа
+      hair:'#3a2218', hairHi:'#6a4430',   // цвет волос и бликов
+      skin:'#f2c4a0', skinHi:'#ffdcc2', skinLo:'#dfa07a',   // тон кожи
+      iris:'#5a3b2a', irisHi:'#9a6a48',   // цвет глаз
+      glasses:true,                      // true: добавить очки
+      bubbles:['Привет! 👋','Загляни в мои проекты   ','Я всё вижу 👀   ','Нужен специалист по ИИ? 😉     ']
+    }
+  };
   /* ==================================================== */
 
   var root=document.getElementById('psRoot'); if(!root)return;
