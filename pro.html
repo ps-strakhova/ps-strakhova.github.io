@@ -40,10 +40,10 @@
     </div>
   </header>
 
-  <aside class="ps-note" aria-label="О себе">
+  <aside class="ps-note" aria-label="Приветствие">
     <h2>Полина Страхова</h2>
-    <p>Внедряю ИИ и автоматизирую процессы: LLM, RAG, компьютерное зрение. Fullstack разработка.</p>
-    <small>Откройте папки, чтобы посмотреть проекты</small>
+    <p>Внедряю ИИ и автоматизирую процессы: LLM, RAG, компьютерное зрение. Верстка сайтов и Fullstack разработка.</p>
+    <small>Откройте любую папку, чтобы посмотреть проекты</small>
   </aside>
 
   <nav class="ps-desktop" aria-label="Проекты">
@@ -56,6 +56,8 @@
     <button class="ps-icon ps-file" data-open="contacts"><svg viewBox="0 0 80 96"><use href="#ps-doc"/></svg><span>Контакты</span></button>
     <button class="ps-icon" data-open="auto"><svg viewBox="0 0 96 80"><use href="#ps-folder"/></svg><span>Автоматизация</span></button>
   </nav>
+
+  <div class="ps-portrait" id="psPortrait" aria-hidden="true"><img id="psPortraitImg" alt=""></div>
 
   <div class="ps-windows" id="psWindows"></div>
 
@@ -116,10 +118,10 @@
   </template>
 
   <template id="ps-t-cv" data-title="Компьютерное зрение" data-w="600">
-    <h3>Своя модель детекции на YOLO для заказчика X-Bio</h3>
+    <h3>Своя модель детекции на YOLO для заказчика X-BIO</h3>
     <p class="ps-lead">Командный проект: от разметки данных до онлайн-подсчёта объектов. Статья в РИНЦ и диплом I степени научной конференции (2025).</p>
     <div class="ps-shots"></div>
-    <h4>Что сделано (принимала участие в каждом этапе)</h4>
+    <h4>Что сделано (участвовала на каждом этапе)</h4>
     <ul>
       <li>Вручную собрали датасеты: более 1000 изображений, разметка и анализ</li>
       <li>Обучили модели для детекции, классификации и сегментации</li>
@@ -156,7 +158,7 @@
       <li>REST API на Laravel, проектирование БД в MySQL, тестирование в Postman</li>
       <li>Веб-платформа мониторинга с ролями, графиками и выгрузкой отчётов (проект на github без публичного доступа)</li>
     </ul>
-    <p class="ps-nda"> Данная страница портфолио - также мой личный проект</p>
+    <p class="ps-nda"> Данная страница портфолио - также мой личный проект.</p>
     <div class="ps-tags"><span class="ps-tag">Tilda</span><span class="ps-tag">HTML / CSS / JS</span><span class="ps-tag">Laravel</span><span class="ps-tag">FastAPI</span><span class="ps-tag">MySQL</span><span class="ps-tag">Figma</span></div>
     </template>
   
@@ -203,7 +205,6 @@
       <dt>Переподготовка</dt><dd>Специалист по анализу данных, 2024</dd>
       <dt>Опыт</dt><dd>Разработчик проекта мониторинга оборудования, 2025 — н.в.<br>Программист, ООО «СБУ 89», 12.2025 — 10.2026</dd>
       <dt>Языки</dt><dd>Русский, английский B1–B2</dd>
-      <dt>Командировки</dt><dd>Готова</dd>
     </dl>
   </template>
 
@@ -248,7 +249,7 @@
       <dt>Почта</dt><dd><a href="mailto:pstrakhova@gmail.com">pstrakhova@gmail.com</a></dd>
       <dt>Телефон</dt><dd><a href="https://wa.me/79222636346" target="_blank" rel="noopener">+7 922 263-63-46</a></dd>
       <dt>GitHub</dt><dd><a href="https://github.com/ps-strakhova" target="_blank" rel="noopener">ps-strakhova</a></dd>
-      <dt>Город</dt><dd>Тюмень · удалённо, гибрид, командировки</dd>
+      <dt>Город</dt><dd>Тюмень</dd>
     </dl>
     <div class="ps-btns"><a class="ps-btn" href="https://t.me/ps_strakhova" target="_blank" rel="noopener">Написать в Telegram</a><a class="ps-btn alt" href="mailto:pstrakhova@gmail.com">Написать на почту</a></div>
   </template>
@@ -259,6 +260,7 @@
   /* ============ НАСТРОЙКИ ============ */
   var PS_CONFIG={
     showEmpty:false,           // true: показать пустые рамки-заглушки, чтобы увидеть, где будут фото
+    portrait:'assets/photo/portrait.png',   // ваше фото: PNG с прозрачным фоном (вырез по контуру). Пусто или нет файла — блок скрыт
 
     /* ФОТО, СКРИНШОТЫ И ВИДЕО 
       файлы в папке assets/. Ключ = окно, в котором показать:
@@ -286,7 +288,7 @@
       ],
       cv:[
         {src:'assets/cv/CV1.png', cap:'Детекция и подсчёт'},
-        {youtube:'Q2gAJn_pdGg', cap:'Видео: подсчёт объектов', phone:true},
+        {video:'assets/video/processed_result.mp4', cap:'Демонстрация работы модуля фильтрации и подсчёта объектов', phone:false},
       ],
       app:[
         {src:'assets/app/App1.png', cap:'Главный экран', phone:true},
@@ -445,6 +447,12 @@
     var top=null,tz=-1; Object.keys(wins).forEach(function(k){var v=+wins[k].style.zIndex||0; if(v>tz){tz=v;top=k}});
     if(top){ wins[top].remove(); delete wins[top]; mark(top,false); }
   });
+
+  var pt=document.getElementById('psPortraitImg');
+  if(pt){
+    if(PS_CONFIG.portrait){ pt.onerror=function(){ pt.parentNode.style.display='none'; }; pt.src=PS_CONFIG.portrait; }
+    else pt.parentNode.style.display='none';
+  }
 
   if(window.innerWidth>=900) setTimeout(function(){openWin('about')},500);
 })();
