@@ -51,25 +51,32 @@ html,body{margin:0;background:#f3f5f9}
 .ps-pill:before{content:"";width:6px;height:6px;border-radius:50%;background:#26c46a}
 
 /* ---------- иконки рабочего стола ---------- */
-.ps-desktop{position:absolute;inset:0;z-index:1;padding:56px 18px 96px;display:grid;grid-auto-flow:column;
-  grid-template-rows:repeat(4,minmax(0,110px));grid-auto-columns:104px;gap:6px 8px;align-content:start;justify-content:start}
-.ps-icon{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:8px 4px;border-radius:12px;
-  color:var(--ink);text-align:center;transition:background .15s,transform .15s}
-.ps-icon:hover,.ps-icon:focus-visible{background:var(--bar);outline:none;transform:translateY(-2px)}
-.ps-icon svg{width:62px;height:52px;color:var(--c,#ffb85c);filter:drop-shadow(0 6px 8px rgba(var(--shadow),.18))}
-.ps-icon.ps-file svg{width:46px;height:56px}
-.ps-icon span{font-size:12px;line-height:1.2;font-weight:600}
-.ps-badge{position:absolute;top:2px;right:12px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:var(--coral);padding:2px 6px;border-radius:99px}
-.ps-badge.soon{background:var(--violet)}
-.ps-root[data-theme="night"] .ps-badge.soon{color:#15121f}
+.ps-desktop{position:absolute;inset:0;z-index:1;padding:62px 18px 96px;display:grid;grid-auto-flow:column;
+  grid-template-rows:repeat(4,minmax(0,108px));grid-auto-columns:108px;gap:4px 6px;align-content:start;justify-content:start}
+.ps-icon{position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;background:none;border:1px solid transparent;padding:8px 4px;border-radius:10px;
+  color:var(--ink);text-align:center;transition:background .15s,border-color .15s}
+.ps-icon:hover,.ps-icon:focus-visible{background:var(--accent-soft);border-color:var(--line);outline:none}
+.ps-icon svg{width:58px;height:48px;color:var(--c,var(--folder));filter:drop-shadow(0 4px 6px rgba(var(--shadow),.14))}
+.ps-icon.ps-file svg{width:42px;height:52px;color:var(--c,var(--file-ink))}
+.ps-icon[data-open="main"]{--c:#f2877a}
+.ps-icon[data-open="rag"]{--c:#8f9bff}
+.ps-icon[data-open="cv"]{--c:#4fb8dc}
+.ps-icon[data-open="app"]{--c:#5fcb9c}
+.ps-icon[data-open="web"]{--c:#f3bb6e}
+.ps-icon[data-open="auto"]{--c:#3fc4b2}
+.ps-icon[data-open="about"]{--c:#7b86f5}
+.ps-icon[data-open="contacts"]{--c:#f2877a}
+.ps-icon span{font-size:12px;line-height:1.25;font-weight:600}
+.ps-badge{position:absolute;top:3px;right:14px;font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:#f2677a;padding:2px 6px;border-radius:5px}
+.ps-badge.soon{background:var(--ink);color:var(--bg)}
 
 /* ---------- карточка-визитка ---------- */
-.ps-note{position:absolute;right:5vw;top:76px;z-index:1;width:250px;padding:20px 20px 22px;background:var(--note);color:var(--note-ink);transform:rotate(2.5deg);
-  box-shadow:0 14px 24px rgba(var(--shadow),.16);border-radius:4px 4px 18px 4px;font-size:15px;line-height:1.45}
-.ps-note:before{content:"";position:absolute;left:50%;top:-10px;width:70px;height:20px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.6)}
-.ps-note h2{margin:0 0 6px;font-size:22px;line-height:1.15}
-.ps-note p{margin:0 0 10px}
-.ps-note small{color:var(--note-small);font-weight:600}
+.ps-note{position:absolute;right:5vw;top:76px;z-index:1;width:262px;padding:22px 22px 22px;background:#ffd9e6;color:#3a2230;transform:rotate(2.5deg);
+  box-shadow:0 16px 28px -10px rgba(var(--shadow),.28);border-radius:4px 4px 18px 4px;font-size:14.5px;line-height:1.5}
+.ps-note:before{content:"";position:absolute;left:50%;top:-10px;width:70px;height:20px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.65)}
+.ps-note h2{margin:0 0 8px;font-size:20px;line-height:1.2;font-weight:650;letter-spacing:-.01em;color:#3a2230}
+.ps-note p{margin:0 0 12px;color:#5b3a4b}
+.ps-note small{color:#a03b66;font-weight:600}
 
 /* ---------- окна ---------- */
 .ps-windows{position:absolute;inset:0;z-index:20;pointer-events:none}
@@ -79,10 +86,10 @@ html,body{margin:0;background:#f3f5f9}
 .ps-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:grab;user-select:none;touch-action:none;border-bottom:1px solid var(--line)}
 .ps-bar:active{cursor:grabbing}
 .ps-dots{display:flex;gap:7px}
-.ps-dots i,.ps-dots button{width:11px;height:11px;border-radius:50%;border:0;padding:0;background:var(--ctl);display:block}
-.ps-dots button{position:relative}
-.ps-dots button:hover{background:#e5484d}
-.ps-dots i:last-child{background:var(--ctl)}
+.ps-dots i,.ps-dots button{width:12px;height:12px;border-radius:50%;border:0;padding:0;background:#ffc13d;display:block}
+.ps-dots button{position:relative;background:#ff6b63}
+.ps-dots button:hover:after{content:"×";position:absolute;inset:0;font-size:11px;line-height:12px;font-weight:700;color:#7a1d17}
+.ps-dots i:last-child{background:#34c759}
 .ps-ttl{flex:1;text-align:center;font-size:12.5px;font-weight:600;color:var(--mute);margin-right:40px;letter-spacing:.01em}
 .ps-body{padding:22px 24px 26px;overflow:auto;font-size:14.5px;line-height:1.6}
 .ps-body h3{margin:0 0 6px;font-size:20px;line-height:1.25;font-weight:650;letter-spacing:-.01em}
@@ -154,7 +161,6 @@ html,body{margin:0;background:#f3f5f9}
 .ps-win.ps-termwin{background:#0f1626;border-color:rgba(255,255,255,.1)}
 .ps-termwin .ps-bar{border-bottom-color:rgba(255,255,255,.1)}
 .ps-termwin .ps-ttl{color:#9aa7bd}
-.ps-termwin .ps-dots i,.ps-termwin .ps-dots button{background:rgba(255,255,255,.22)}
 .ps-term{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#dbe4f3}
 .ps-term p{margin:0 0 7px}
 .ps-term b{color:#7ea2ff}
